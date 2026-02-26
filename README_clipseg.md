@@ -1,5 +1,11 @@
 # Prompted Segmentation for Drywall QA
 **Model:** CLIPSeg | **Seed:** 42 | **GPU:** Tesla T4
+Text-conditioned binary segmentation model that produces pixel masks given an image
+and a natural-language prompt. Supports two prompts:
+- `"segment taping area"` — detects drywall seams and joint tape
+- `"segment crack"` — detects wall cracks
+
+---
 
 
 ## Quick Links
@@ -7,13 +13,19 @@
 - **Colab Notebook:** https://colab.research.google.com/drive/1I7o8OPhOJ1CssEf5cvuHpFMbWrxWdP2j?authuser=1#scrollTo=IkL_5LEVX9WF
 - **Google Drive (outputs + checkpoints):** https://drive.google.com/drive/folders/1pTXNU_Wunj1SYvIsZJqGFF9m9nhWele1?usp=sharing
 
+## Project Workflow
 
-Text-conditioned binary segmentation model that produces pixel masks given an image
-and a natural-language prompt. Supports two prompts:
-- `"segment taping area"` — detects drywall seams and joint tape
-- `"segment crack"` — detects wall cracks
+This project is split across two environments:
 
----
+**Local (VSCode) — Preprocessing**
+- Downloaded datasets from Roboflow using `src/download_data.py`
+- Generated binary masks and data splits using `src/preprocess.py`
+- Output: `data/processed/` with 1,395 drywall + 5,369 crack images
+
+**Google Colab — Training & Inference**
+- Uploaded `data/processed/` to Google Drive
+- Ran `colab/train_and_infer.ipynb` on T4 GPU
+- Outputs saved to Google Drive under `origin-drywall-qa/outputs/`
 
 ## Approach
 
