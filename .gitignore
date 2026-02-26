@@ -1,0 +1,29 @@
+# Data — too large for GitHub (900MB+)
+data/raw/
+data/processed/
+
+# Outputs
+output/
+outputs/
+
+# Environment — never commit API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
