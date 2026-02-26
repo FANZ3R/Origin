@@ -129,8 +129,8 @@ origin-drywall-qa/
 │   ├── explore_data.py
 │   └── preprocess.py
 ├── colab/
-│   └── train_and_infer.ipynb
-├── outputs/
+│   └── origin.ipynb   (also added link of this in the submission)
+├── outputs/            (same added the link as well as the ouput is large for github)
 │   ├── masks/                # prediction PNGs
 │   └── visuals/              # orig | GT | pred comparisons
 ├── requirements.txt
