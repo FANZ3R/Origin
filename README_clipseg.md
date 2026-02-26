@@ -1,4 +1,12 @@
 # Prompted Segmentation for Drywall QA
+**Model:** CLIPSeg | **Seed:** 42 | **GPU:** Tesla T4
+
+
+## Quick Links
+- **GitHub:** https://github.com/FANZ3R/Origin
+- **Colab Notebook:** https://colab.research.google.com/drive/1I7o8OPhOJ1CssEf5cvuHpFMbWrxWdP2j?authuser=1#scrollTo=IkL_5LEVX9WF
+- **Google Drive (outputs + checkpoints):** https://drive.google.com/drive/folders/1pTXNU_Wunj1SYvIsZJqGFF9m9nhWele1?usp=sharing
+
 
 Text-conditioned binary segmentation model that produces pixel masks given an image
 and a natural-language prompt. Supports two prompts:
